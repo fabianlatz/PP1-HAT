@@ -33,7 +33,7 @@
     %\WarningFilter{scrreprt}{Activating an ugly workaround}
     \WarningFilter{titlesec}{Non standard sectioning command detected}
 \documentclass[ openright,titlepage,numbers=noenddot,headinclude,%twoside, %1headlines,% letterpaper a4paper
-                footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
+                footinclude=true,cleardoublepage=empty,abstract=false, % <--- obsolete, remove (todo)
                 BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
                 ngerman,american,%lockflag%
                 ]{scrreprt}
@@ -92,9 +92,6 @@
 % Alwas use \cleardoublepage before \part{...}.
 \cleardoublepage
 \part{Thesis}\label{pt:thesis}
-\include{chapters/examples/chapter01}
-\include{chapters/examples/chapter02}
-\include{chapters/examples/chapter03}
 %*************************************************************************
 % Recommendations
 %*************************************************************************
@@ -107,8 +104,6 @@
 %\renewcommand{\thechapter}{\alph{chapter}}
 \cleardoublepage
 \part{Appendix}
-\include{chapters/examples/appendix01}
-\include{chapters/examples/appendix02}
 %*************************************************************************
 % Other Stuff in the Back
 %*************************************************************************
