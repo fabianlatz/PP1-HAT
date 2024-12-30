@@ -1,7 +1,7 @@
 MASTER  = thesis
 VERSION = v4.4
-NAME    = Max
-SURNAME = Mustermann
+NAME    = Fabian
+SURNAME = Latz
 
 all: clean
 	@pdflatex ${MASTER}.tex
@@ -22,7 +22,7 @@ cleanall: clean
 
 test: clean
 	@pdflatex -interaction=nonstopmode -halt-on-error ${MASTER}.tex
-	@test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) || echo "No Bibtex" 
+	@test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) || echo "No Bibtex"
 	@pdflatex ${MASTER}.tex
 
 bz2: clean
