@@ -1,11 +1,12 @@
-\RequirePackage{silence} % :-\
+% Silence warnings from KOMA-Script and titlesec in classicthesis
+\RequirePackage{silence}
     \WarningFilter{scrreprt}{Usage of package `titlesec'}
-    %\WarningFilter{scrreprt}{Activating an ugly workaround}
     \WarningFilter{titlesec}{Non standard sectioning command detected}
-\documentclass[ openright,titlepage,numbers=noenddot,headinclude,%twoside, %1headlines,% letterpaper a4paper
-                footinclude=true,cleardoublepage=empty,abstract=false, % <--- obsolete, remove (todo)
-                BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
-                ngerman,american,%lockflag%
+
+\documentclass[openright,titlepage,numbers=noenddot,headinclude,%twoside, %1headlines,
+                footinclude=true,cleardoublepage=empty,abstract=false,
+                BCOR=5mm,paper=a4,fontsize=11pt,
+                ngerman,american,%lockflag
                 ]{scrreprt}
 
 % Note: Make all your adjustments in one of these files
@@ -47,7 +48,7 @@
 \cleardoublepage
 \pagestyle{scrheadings}
 \pagenumbering{arabic}
-% Alwas use \cleardoublepage before \part{...}.
+% Alwas use \cleardoublepage before \part{...}
 \cleardoublepage
 \part{Thesis}\label{pt:thesis}
 
@@ -57,6 +58,5 @@
 \cleardoublepage
 \part{Appendix}
 
-% Other Stuff in the Back
 \cleardoublepage\include{frontbackmatter/Bibliography}
 \end{document}
