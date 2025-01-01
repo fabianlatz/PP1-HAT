@@ -22,4 +22,4 @@ RUN apt-get -qq update && apt-get install -y --no-install-recommends \
     chktex
 
 # Command to actually build the LaTeX code.
-CMD ["make", "--directory", "/thesis-template/", "publish"]
+CMD ["latexmk", "/thesis-template/thesis.tex"]
