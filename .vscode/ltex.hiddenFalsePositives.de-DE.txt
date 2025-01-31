@@ -1,0 +1,1 @@
+{"rule":"ZAHL_IM_WORT_SPELLING_RULE","sentence":"^\\QVor allem die Gestaltung von \\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-)[0-9]+\\Qs, die als Bindeglied zwischen verschiedenen Softwarekomponenten fungieren, erfordert besondere Aufmerksamkeit.\\E$"}
