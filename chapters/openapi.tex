@@ -11,5 +11,24 @@ Sie beinhaltet einige Begriffe, um allgemein-verständliche und weit-verbreitete
 Darüber hinaus hat sich um \OA eine Reihe von Werkzeugen und Bibliotheken entwickelt, die die Erstellung, Validierung und Verwendung von \acp{OAD} erleichtern~\cites{ope,ope23,ope23a}.
 
 \section{Möglichkeiten mit \OA}
+Neben der bereits angesprochenen Generierung einer \ac{OAD} bietet das Ökosystem rund um \OA eine Reihe von Funktionen, die bei der Spezifikation und Implementierung einer \ac{API} helfen können:
+\begin{enumerate}
+	\item \textbf{Validierung und statische Analyse:} Die \ac{OAD} kann auf syntaktische Korrektheit und Einhaltung der \ac{OAS} geprüft werden.
+	\item \textbf{Datenvalidierung:} Die \ac{OAD} kann auch auf semantische Korrektheit geprüft werden, indem sie mit den tatsächlichen Daten verglichen wird, die die \ac{API} zurückgibt.
+	\item \textbf{Grafische Editoren:} Eine Reihe von Werkzeugen bietet grafische Oberflächen, um \acp{OAD} zu erstellen und zu bearbeiten.
+	\item \textbf{Code-Generierung:} Mithilfe von Bibliotheken für viele Server- sowie Client-seitige Programmiersprachen und Frameworks kann aus der \ac{OAD} ein Code-Grundgerüst generiert werden, das automatisch konform zur gegebenen \ac{OAD} ist.
+	\item \textbf{Mock-Server:} Neben der Generierung des Codes zur weiteren Entwicklung können auch Mock-Server generiert werden, die die \ac{API} simulieren und so die Entwicklung von Clients erleichtern. Damit wird auch eine testgetriebene Entwicklung unterstützt.
+	\item \textbf{Sicherheitsanalyse:} Bereits in der Design-Phase können Sicherheitsrisiken identifiziert und bestenfalls behoben werden.
+\end{enumerate}\cite{ope23}
+
+\OA bietet damit einen leicht verständlichen, Programmiersprachen- und Anbieter-unabhängigen Einstieg in jede \ac{API}, die nach ihr spezifiziert wurde.
+So erklärt sich auch die hohe Verbreitung bis hin zum Status als Industriestandard für \acs{REST}-\acs{API}-Spezifikationen~\cite{ope}.
 
 \section{Rolle von \OA im \AFA}
+Die \ac{OAI} selbst legt für den Einsatz von \OA keine spezifischen Anwendungsfälle fest, empfiehlt allerdings einen \AFA, in dem die \ac{OAD} als erstes erstellt wird, um darauf die Implementierung der \ac{API} aufzubauen~\cites{ope,ope24}.
+Bei einem solchen Vorgehen ist die Unabhängigkeit von Programmiersprachen und Frameworks besonders hilfreich, da so eine nutzerzentrierte Beschreibung der \ac{API} von Beginn an ermöglicht wird, statt auf Besonderheiten einzelner Implementierungen Rücksicht nehmen zu müsssen~\cite{ope}.
+Dabei erleichtern Werkzeuge aus dem \OA-Umfeld die Spezifikation ohne eigentliche Programmierung oder Kenntnis davon enorm~\cites[1629]{cha21}{ope24}.
+
+Aufgrund ihrer zentralen Rolle für die weitere Entwicklung sollten \acp{OAD} in jedem Fall unter Versionskontrolle gestellt und damit allen Beteiligten immer aktuell zur Verfügung gestellt werden.
+So können sie permanent zur Generierung von Code, Testfällen oder zur Validierung der Implementierung genutzt werden.
+Für letzteres können spezielle Annotationen im Quellcode genutzt werden, um eine \ac{OAD} aus der Implementierung zu generieren und mit der vorgebenenen zu vergleichen \textendash\ beispielsweise mittels automatisierter Tests im Rahmen der Continuous Integration~\cite{ope24}.
