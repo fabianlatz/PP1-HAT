@@ -6,7 +6,7 @@ Dies wird vornehmlich durch klarere Übergänge zwischen den einzelnen Systemkom
 \section{Parallele Entwicklung von Client- und Server-Komponenten} \label{sec:parallel-dev}
 \AF erlaubt eine parallele Entwicklung von Client-Komponenten, die die \ac{API} nutzen, und den Server-Komponenten, die die \ac{API} implementieren und bereitstellen.
 Zusätzlich können auf Basis einer \ac{API}-Spezifikation auch Tests geschrieben werden, die der Verifizierung der \ac{API}-Implementierung dienen \textendash\ alles auf Basis der zu Beginn definierten \ac{API}, beispielsweise in Form einer \ac{OAD}~\cite{vol22}.
-Unter Umständen erlaubt dies sogar die parallele Entwicklung verschiedener Server-Komponenten, wenn bereits im Design der \ac{API} eine klare und sinnvolle Trennung in Microservices erkennbar ist, indem bspw. Endpunkte mit demselben Präfix zu einer Sub-\ac{API} in einem Service zusammengefasst werden~\cite[354]{de23}.
+Unter Umständen erlaubt dies sogar die parallele Entwicklung verschiedener Server-Komponenten, wenn bereits im Design der \ac{API} eine klare und sinnvolle Trennung in Microservices erkennbar ist, indem \bspw Endpunkte mit demselben Präfix zu einer Sub-\ac{API} in einem Service zusammengefasst werden~\cite[354]{de23}.
 
 Eine solche Trennung von Client- und Server wird auch \emph{kopflose} oder \emph{headless} Architektur genannt, da der Kopf, gemeint ist der Client, vom Rest des Körpers, der Logik auf Serverseite, getrennt ist~\cite[5]{kul23}.
 Mit diesem Vorteil wird die Entwicklungszeit eines Projekts mit Client- und Server-Komponenten verkürzt, da die Entwickler der Client-Komponenten nicht auf die Fertigstellung der Server-Komponenten warten müssen, um mit ihrer Arbeit beginnen zu können.
