@@ -1,0 +1,50 @@
+\chapter{Best Practices für eine \AF-Entwicklung}
+Die Entwicklung von \acp{API} nach dem \AF-Prinzip bringt viele Vorteile mit sich, die in den vorherigen Kapiteln bereits erläutert wurden.
+Dennoch ist das Vorgehen noch relativ jung und daher nicht einheitlich standardisiert.
+Auch gibt es bisher wenig wissenschaftliche Forschung dazu; die meisten Informationen stammen aus praktischen Erfahrungsberichten.
+In diesem Kapitel werden daher einige Best Practices vorgestellt, die sich in der Praxis bewährt haben.
+Diese sind in drei Kategorien unterteilt: \emph{Design}, \emph{Entwicklung} und \emph{Dokumentation}.
+Die Kategorien sind dabei chronologisch sortiert, da sie den Entwicklungsprozess von der Konzeption bis zur Veröffentlichung einer \ac{API} abbilden.
+Die Best Practices sind dabei allgemein gehalten und können auf verschiedene Programmiersprachen und Technologien angewendet werden.
+Sie sind jedoch nicht abschließend und können je nach Anwendungsfall und Teamstruktur angepasst werden.
+
+Zunächst einmal sollte die \ac{API} selbst als Produkt angesehen werden, statt nur die Applikationen um sie herum.
+Letztendlich ist es die \ac{API}, die die Anforderungen an das System spezifiziert und als zentrale Schnittstelle erst eine Integration verschiedener Systeme ermöglicht~\cite[350]{de23}.
+
+Um diese Anforderungen korrekt abzubilden, sollte die Anwendung des \AFAes stets kundenorientiert sein und sich auf den tatsächlichen Einsatz der \ac{API} im Produkt fokussieren, um eine maximale Benutzerzufriedenheit zu erreichen~\cite[1627]{cha21}.
+Um den nicht-funktionalen Anforderungen an komplexe Systeme gerecht werden zu können, sollte eine \ac{API} möglichst iterativ und modular entwickelt werden, wobei Business-Analysten, Produktmanager und Entwickler eng zusammenarbeiten sollten~\cite[352]{de23}.
+Für eine solche Vorgehensweise ist der Einsatz geeigneter Werkzeuge unverzichtbar~\cite[1628]{cha21}, wie bereits in \autoref{ch:openapi} erläutert wurde.
+Diese unterstützen auch dabei, eine Entwickler-freundliche \ac{API} zu entwerfen, denn sie sind es, die die \ac{API} letztendlich nutzen und daher den größten Nutzen aus einem guten Design ziehen können~\cite[355]{de23}.
+
+Für eine Unternehmensweite Etablierung des \AFAes braucht es jedoch etwas mehr als die technische Umsetzung.
+Die Implikationen des Ansatzes müssen von den Entwicklern verstanden und in ihre Prozesse integriert werden, um eine erfolgreiche \AF-Entwicklung über Teams hinweg zu ermöglichen~\cite[359]{de23}.
+Dabei kann auch der Aufbau einer Community of Practice helfen, in der Projekt-unabhängig Erkenntnisse zur Integration von \AF geteilt und für alle Interessenten zugänglich gemacht werden~\cite[4]{kul23}.
+Dabei fehlt es aktuell noch an standardisierten Begriffen oder Prozessen, die das Verständnis und die Einführung von \AF in Unternehmen erleichtern~\cites[77]{bea22}[2]{kul23}.
+
+\section{API-Design und -Dokumentation}
+Beim Design einer \ac{API} sollten einige Dinge beachtet werden, um eine möglichst benutzerfreundliche und konsistente Schnittstelle zu schaffen.
+Neben dem Befolgen von Prinzipien des \ac{REST}-Paradigmas sollte ein besonderes Augenmerk auf die Definition von Fehlercodes und -nachrichten gelegt werden, um möglichst aufschlussreiche Fehlermeldungen für Entwickler wie Endnutzer bereitstellen zu können.
+Auch sollte von Beginn an auf eine konsistente Namensgebung und Strukturierung der Endpunkte und Business-Objekte geachtet werden, um die \ac{API} leichter verständlich zu machen.
+Um nicht-funktionalen Anforderungen Rechnung zu tragen, sollte auch die Performance sowie die Sicherheit des Systems bereits in der Design-Phase berücksichtigt werden~\cite[352\psq,354]{de23}.
+
+Um alle Aspekte des Designs festzuhalten und für alle Beteiligten zugänglich zu machen, sollte die \ac{API} für alle Entwickler transparent dokumentiert werden, vorzugsweise in einer \ac{OAD}.
+Die Dokumentation sollte zusätzlich zu den semantischen Informationen textuelle Beschreibungen an Endpunkten, Parametern und Business-Objekten \textendash\ bei Bedarf um Beispiele ergänzt \textendash\ enthalten~\cite[353]{de23}.
+Die Dokumentation sollte stets aktuell gehalten und in einem zentralen Repository unter Versionskontrolle gestellt werden, um eine konsistente und verlässliche Informationsquelle zu gewährleisten.
+
+Um \AF über Teams und Projekte hinweg erfolgreich zu etablieren, ist es sinnvoll, einen Leitfaden zum \ac{API}-Design zu verfassen, an den sich alle \acp{API} des Unternehmens halten müssen~\cites[359]{de23}[3\psq]{kul23}.
+Dieser Leitfaden sollte sich zudem an der gängigen Praxis für \ac{REST}-\acp{API} orientieren, darunter Namenskonventionen für \acp{URL}, \ac{HTTP}-Methoden und -Statuscodes.
+Der Einsatz geeigneter Werkzeuge erleichtert die Einhaltung solcher Konventionen~\cite[360]{de23}.
+Die Gesamtheit aller \acp{API} eines Unternehmens sollte zentral katalogisiert werden, um sie transparent zugänglich und auffindbar zu machen.
+So können sich zukünftige Projekte an bestehenden \acp{API} orientieren und diese womöglich sogar wiederverwenden~\cite[3]{kul23}.
+
+\section{Mock-Server für parallele Entwicklung}
+Eine besondere Rolle bei der \hyperref[sec:parallel-dev]{parallelen Entwicklung von Client- und Server-Komponenten} spielt der Einsatz von Mock-Servern.
+Diese simulieren die Server-Komponenten und ermöglichen es den Entwicklern der Client-Komponenten, bereits mit der Arbeit zu beginnen, bevor die Server-Komponenten fertiggestellt sind.
+Dadurch wird auch die Möglichkeit geschaffen, testgetriebene Entwicklung von der \ac{API}-Spezifikation aus zu betreiben~\cite[353]{de23}.
+Dabei sollten die Mock-Server möglichst einfach und schnell aufzusetzen sein, um ihre Vorteile nicht durch zusätzlichen Aufwand zu schmälern.
+
+% Keine Quellen, evtl. unnötig
+Es ist ebenso möglich, eine Fassade der \ac{API} tatsächlich zu implementieren, sodass der echte Server verwendet werden kann.
+Bei diesem Vorgehen würden die nötigen Endpunkte und Business-Objekte bereits definiert und implementiert, jedoch ohne die eigentliche Logik dahinter. Dieser Schritt stünde auch bei Verwendung eines externen Mock-Servers an erster Stelle der serverseitigen Implementierung, spart also effektiv sogar die Zeit für die Konfiguration eines Mock-Servers.
+Eine automatische Generierung der \ac{OAD} aus der Fassade heraus würde dann bereits die vorgegebene Spezifikation erfüllen, ohne dass die dahinterliegende Logik bereits implementiert sein muss.
+Diese Fassade kann vergleichsweise schnell implementiert werden und ermöglicht es, die \ac{API} von Beginn an vom tatsächlich verwendeten Server aus bereitzustellen, was die insgesamt benötigten Systeme reduziert.

@@ -3,7 +3,7 @@ In diesem Kapitel sollen die Vorteile des \AFAes für die Zusammenarbeit unter E
 Allgemein verspricht der \AFA eine beschleunigte Softwareentwicklung und eine angenehmere Arbeit für Entwickler~\cite[354\psq]{de23}.
 Dies wird vornehmlich durch klarere Übergänge zwischen den einzelnen Systemkomponenten und einer daraus folgenden besseren Kommunikation zwischen den Entwicklern der Komponenten erreicht~\cite[75]{bea22}.
 
-\section{Parallele Entwicklung von Client- und Server-Komponenten}
+\section{Parallele Entwicklung von Client- und Server-Komponenten} \label{sec:parallel-dev}
 \AF erlaubt eine parallele Entwicklung von Client-Komponenten, die die \ac{API} nutzen, und den Server-Komponenten, die die \ac{API} implementieren und bereitstellen.
 Zusätzlich können auf Basis einer \ac{API}-Spezifikation auch Tests geschrieben werden, die der Verifizierung der \ac{API}-Implementierung dienen \textendash\ alles auf Basis der zu Beginn definierten \ac{API}, beispielsweise in Form einer \ac{OAD}~\cite{vol22}.
 Unter Umständen erlaubt dies sogar die parallele Entwicklung verschiedener Server-Komponenten, wenn bereits im Design der \ac{API} eine klare und sinnvolle Trennung in Microservices erkennbar ist, indem bspw. Endpunkte mit demselben Präfix zu einer Sub-\ac{API} in einem Service zusammengefasst werden~\cite[354]{de23}.
