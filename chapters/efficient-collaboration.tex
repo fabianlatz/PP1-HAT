@@ -1,0 +1,26 @@
+\chapter{Effiziente Zusammenarbeit durch \AF}
+In diesem Kapitel sollen die Vorteile des \AFAes für die Zusammenarbeit unter Entwicklern und damit verbunden auch die wirtschaftlichen Potenziale des Ansatzes dargestellt werden.
+Allgemein verspricht der \AFA eine beschleunigte Softwareentwicklung und eine angenehmere Arbeit für Entwickler~\cite[354\psq]{de23}.
+Dies wird vornehmlich durch klarere Übergänge zwischen den einzelnen Systemkomponenten und einer daraus folgenden besseren Kommunikation zwischen den Entwicklern der Komponenten erreicht~\cite[75]{bea22}.
+
+\section{Parallele Entwicklung von Client- und Server-Komponenten}
+\AF erlaubt eine parallele Entwicklung von Client-Komponenten, die die \ac{API} nutzen, und den Server-Komponenten, die die \ac{API} implementieren und bereitstellen.
+Zusätzlich können auf Basis einer \ac{API}-Spezifikation auch Tests geschrieben werden, die der Verifizierung der \ac{API}-Implementierung dienen \textendash\ alles auf Basis der zu Beginn definierten \ac{API}, beispielsweise in Form einer \ac{OAD}~\cite{vol22}.
+Unter Umständen erlaubt dies sogar die parallele Entwicklung verschiedener Server-Komponenten, wenn bereits im Design der \ac{API} eine klare und sinnvolle Trennung in Microservices erkennbar ist, indem bspw. Endpunkte mit demselben Präfix zu einer Sub-\ac{API} in einem Service zusammengefasst werden~\cite[354]{de23}.
+
+Eine solche Trennung von Client- und Server wird auch \emph{kopflose} oder \emph{headless} Architektur genannt, da der Kopf, gemeint ist der Client, vom Rest des Körpers, der Logik auf Serverseite, getrennt ist~\cite[5]{kul23}.
+Mit diesem Vorteil wird die Entwicklungszeit eines Projekts mit Client- und Server-Komponenten verkürzt, da die Entwickler der Client-Komponenten nicht auf die Fertigstellung der Server-Komponenten warten müssen, um mit ihrer Arbeit beginnen zu können.
+Dabei können Mock-Server besonders hilfreich sein, um fehlende Server-Implementierungen während der laufenden Client-Entwicklung zu simulieren.
+Das wirkt sich ebenfalls positiv auf die Stimmung der Entwickler aus, da sie nicht auf andere Entwickler angewiesen sind und somit ihre Arbeit selbstständiger gestalten können~\cite[351]{de23}.
+
+\section{Verbesserung der Kommunikation zwischen Entwicklern}
+Es besteht kein Zweifel daran, dass der \AFA auch die Kommunikation zwischen Entwicklern verbessern kann.
+Die \ac{API} als Vertrag zwischen Client und Server und damit auch zwischen deren Entwicklern anzusehen, hilft dabei, Missverständnisse zu vermeiden und stattdessen eine gemeinsame Sprache zu etablieren. Diese Sprache baut auf den Begriffen und Konzepten einer \acs{REST}-\acs{API} auf, bietet eine klare Beschreibung aller dokumentierten Erwartungen an das Gesamtsystem und gibt im Optimalfall Aufschluss über Verantwortlichkeiten der jeweiligen Systemkomponenten und respektive ihrer Entwickler.
+Die Wahrscheinlichkeit, aneinander vorbeizuarbeiten, wird somit durch einen gemeinsamen, dokumentierten Ausgangspunkt enorm verringert~\cite[1628]{cha21}.
+Die Konformität mit dem \ac{REST}-Paradigma in Kombination mit einer ausführlichen Dokumentation aller Funktionalitäten der \ac{API} erleichtert zudem das Anlernen neuer Entwickler und deren Einstieg in ein Projekt~\cite[355]{de23}.
+
+\section{Erhöhung der Code-Qualität}
+Durch die frühestmögliche Spezifikation der \ac{API} wird auch die Qualität des produzierten Quellcodes erhöht.
+Den größten Einfluss darauf hat die frühe Erkennung von Fehlern in der Spezifikation, die im Gegensatz zum traditionellen Code-First-Ansatz nicht erst im Laufe der Implementierung, sondern bereits in der Designphase erkannt werden können.
+Das spart mitunter aufwändige Refaktorisierungen und Änderungen an der Implementierung später im Entwicklungsprozess~\cite{vol22}.
+Die Einhaltung der \ac{API}-Spezifikation bei der Implementierung erfordert zudem eine gewisse Einheitlichkeit bis hin zu Standardisierungen, die die Wartbarkeit und Erweiterbarkeit des Systems besonders im Kontext einer Microservice-Architektur positiv beeinflussen~\cite[1628]{cha21}.
