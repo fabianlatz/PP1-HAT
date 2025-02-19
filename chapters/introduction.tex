@@ -1,0 +1,27 @@
+\chapter{Einleitung}
+In der modernen Softwareentwicklung spielen \acp{API} eine zentrale Rolle, insbesondere in Service-orientierten Architekturen und Microservices-Umgebungen.
+Trotz ihrer stetig wachsenden Bedeutung sind unvollständige oder unklare \ac{API}-Dokumentationen häufig eine Quelle für Missverständnisse und Fehler in Softwareprojekten.
+Dieses Problem wird durch traditionelle Entwicklungsmethoden, wie den Code-First-Ansatz, verschärft, bei dem die \ac{API}-Spezifikation erst nach der Implementierung erstellt wird.
+
+Die vorliegende Arbeit wird sich mit dem \AFA befassen, der die Spezifikation der \ac{API} als zentrales Artefakt der Softwareentwicklung in den Vordergrund stellt.
+Durch die frühzeitige Erstellung einer umfassenden \ac{API}-Spezifikation, beispielsweise mithilfe von \OA, können Entwickler Design-Fehler frühzeitig erkennen und beheben.
+Dies ermöglicht eine parallele Entwicklung von Client- und Server-Komponenten, verbessert die Kommunikation zwischen Entwicklern und erhöht die Code-Qualität.
+
+Der Ansatz steckt trotz der Allgegenwärtigkeit von \acp{API} in der Softwareentwicklung und der Notwendigkeit für effiziente Methoden zur \ac{API}-Entwicklung noch in den Kinderschuhen~\cite[78]{bea22}.
+Ziel dieser Arbeit ist es daher, die Vorteile des \AFAes zu untersuchen und Best Practices für dessen Umsetzung zu präsentieren.
+Durch die Analyse der Rolle von \OA im \AFA soll ein umfassendes Verständnis für die Möglichkeiten und Herausforderungen dieses Ansatzes geschaffen werden.
+Letztlich soll die Arbeit einen Beitrag zur Verbesserung der Softwareentwicklung durch effiziente Zusammenarbeit und höhere Code-Qualität leisten.
+
+\paragraph{}
+Eine \ac{API} ist eine Schnittstelle, die es Anwendungen oder Komponenten einer Anwendung ermöglicht, miteinander zu kommunizieren.
+Dazu greifen \acp{API} auf eine Reihe von Regeln, Protokollen und Werkzeugen zurück, um diese Schnittstellen zu spezifizieren.
+Eine \ac{API} abstrahiert dabei die Komplexität der beteiligten Systeme durch die Bereitstellung einer vereinfachten Variante der Funktionalität, die von anderen Systemen genutzt werden kann~\cite[1]{kul23}.
+Eine \ac{API} ist ähnlich zu einer Benutzeroberfläche, die die Interaktionsmöglichkeiten eines Benutzers mit dem System bereitstellt, jedoch auf die Interaktion zwischen Softwarekomponenten beschränkt.
+Statt Textfeldern, Knöpfen und Reglern stellt eine \ac{API} Endpunkte, mögliche Parameter und zu erwartende Rückgabewerte bereit, um Daten auszutauschen~\cites[351]{de23}{ope23a}.
+
+\acp{API} werden häufig mit Verträgen verglichen, da sie ähnlich strikte Vorgaben stellen und eine ähnliche Funktion erfüllen:
+Der Anbieter einer \ac{API} legt die Regeln fest, unter deren Einhaltung er die \ac{API} kontinuierlich bereitstellt und nicht ohne Vorankündigung ändert oder abschaltet.
+Der Nutzer kann sich darauf verlassen und verpflichtet sich im Gegenzug, die \ac{API} nur wie vorgegeben einzusetzen~\cites[1627]{cha21}{ope23a}.
+
+In dieser Arbeit werden lediglich \ac{REST}-\acp{API} betrachtet, da sie auf dem \ac{HTTP} als gemeinsame Sprache der Kommunikation basieren und damit in verschiedenen Anwendungsfällen verbreitet sind.
+Die Grundlagen für ein gutes \ac{API}-Design berufen sich damit ebenso auf die Standards von \ac{HTTP} und Prinzipien von \ac{REST}~\cite[1628]{cha21}.
