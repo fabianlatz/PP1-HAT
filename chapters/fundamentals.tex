@@ -1,4 +1,4 @@
-\chapter{Grundlagen des \AFAes}
+\chapter{Grundlagen des API-First-Ansatzes}
 In diesem Kapitel werden die Grundlagen des \AFAes erläutert und die Vorteile gegenüber traditionellen Entwicklungsmethoden sowie seine Bedeutung für die moderne Softwareentwicklung aufgezeigt.
 Vorab sei erwähnt, dass es zum jetzigen Zeitpunkt (März 2025) keine standardisierte Definition zum \AFA gibt~\cite[77]{bea22}, weshalb die folgenden Ausführungen auf einschlägiger Fachliteratur basieren, um ein möglichst umfassendes Bild der Methodik zu zeichnen.
 
@@ -6,32 +6,32 @@ Vorab sei erwähnt, dass es zum jetzigen Zeitpunkt (März 2025) keine standardis
 Dabei wird die \ac{API} vor jeglicher Implementierung spezifiziert, statt diese als Teil der Dokumentation nach der Implementierung zu erstellen~\cites[1627]{cha21}[349]{de23}.
 Um das zu ermöglichen, muss jegliche Funktionalität des zu entwickelnden Systems über die \ac{API} zugänglich gemacht werden.
 Daraus folgt die Forderung nach einer klaren, ausführlichen und umfassenden Spezifikation aller Schnittstellen, über die mit dem System kommuniziert werden kann~\cite[75]{bea22}.
-Diese beinhaltet alle möglichen Anfragen, die an das System gestellt werden können, sowie die Antworten, die das System darauf gibt, inklusive der jeweils erwarteten Struktur der Ein- und Ausgabe-Werte~\cite[350]{de23}.
+Diese beinhaltet alle möglichen Anfragen, die an das System gestellt werden können, sowie die Antworten, die das System darauf gibt, inklusive der jeweils erwarteten Struktur der Ein"= und Ausgabe"=Werte~\cite[350]{de23}.
 
 Auf dieser Basis können sowohl das System, welches die \ac{API} implementiert, als auch dasjenige, welches die \ac{API} nutzt, unabhängig voneinander entwickelt werden.
 Die \ac{API} wird damit zum Vertrag zwischen allen Systemkomponenten als auch zwischen den Entwicklern und dem Kunden \bzw den Endnutzern~\cite[1627]{cha21}.
 Sobald eine solche Spezifikation besteht, wird sie zu einer Art Vertrag, an den sich alle beteiligten Entwickler und Systemkomponenten halten müssen, an dem sie sich aber auch bei der Entwicklung orientieren können und müssen, um eine reibungslose Zusammenarbeit zu ermöglichen.
-Unter diesen Rahmenbedingungen wird die Grundlage für flexible und entkoppelte Systeme geschaffen, da alle Systeme lediglich konform zur \ac{API}-Spezifikation agieren müssen~\cite[350,354,360]{de23}.
-Damit realisiert der \AFA letztendlich die Design-Phase des \ac{SDLC}: Anforderungsanalyse, Design, Implementierung, Testen, Betrieb und Wartung~\cite{vol22}.
+Unter diesen Rahmenbedingungen wird die Grundlage für flexible und entkoppelte Systeme geschaffen, da alle Systeme lediglich konform zur \ac{API}"=Spezifikation agieren müssen~\cite[350,354,360]{de23}.
+Damit realisiert der \AFA letztendlich die Design"=Phase des \ac{SDLC}: Anforderungsanalyse, Design, Implementierung, Testen, Betrieb und Wartung~\cite{vol22}.
 
-Eine \ac{API}-Spezifikation in der Design-Phase zu entwerfen erfordert jedoch ein hohes Maß an Abstraktion und Kenntnis über die Anforderungen an das System, die Anforderungen der Nutzer und die technischen Möglichkeiten, die zur Verfügung stehen~\cite[362]{de23}.
-Gelingt dies jedoch, so legt die \ac{API}-Spezifikation die Grundlage für eine auf die Anforderungen der Nutzer ausgerichtete Entwicklung und erhöht damit die Erfolgschancen des Systems~\cite[1627]{cha21}.
+Eine \ac{API}"=Spezifikation in der Design"=Phase zu entwerfen erfordert jedoch ein hohes Maß an Abstraktion und Kenntnis über die Anforderungen an das System, die Anforderungen der Nutzer und die technischen Möglichkeiten, die zur Verfügung stehen~\cite[362]{de23}.
+Gelingt dies jedoch, so legt die \ac{API}"=Spezifikation die Grundlage für eine auf die Anforderungen der Nutzer ausgerichtete Entwicklung und erhöht damit die Erfolgschancen des Systems~\cite[1627]{cha21}.
 
-\section{\AF vs. Code-First}
-Bei einem traditionellen Vorgehen, das als \emph{Code-First} bezeichnet werden kann, wird zuerst der Server entwickelt, also die Applikation, die die \ac{API} zur Verfügung stellt.
-Erst sobald dessen Implementierung fertiggestellt ist, kann eine \ac{API}-Spezifikation mit den nötigen Beschreibungen erstellt werden.
+\section{\AF vs. Code"=First}
+Bei einem traditionellen Vorgehen, das als \emph{Code"=First} bezeichnet werden kann, wird zuerst der Server entwickelt, also die Applikation, die die \ac{API} zur Verfügung stellt.
+Erst sobald dessen Implementierung fertiggestellt ist, kann eine \ac{API}"=Spezifikation mit den nötigen Beschreibungen erstellt werden.
 Dieser Vorgang ist mittels Tools zum Übersetzen von speziellen Kommentaren oder Annotationen im Quellcode gut automatisierbar und erfordert daher wenig zusätzliche Kenntnisse oder Aufwand~\cite{ope24}.
 Die Konformität der Spezifikation mit den Anforderungen an das Gesamtsystem kann mit diesem Vorgehen jedoch erst nach Abschluss der Implementierung überprüft werden, was im schlimmsten Fall zusätzlichen Aufwand für Fehlerbehebungen an der \ac{API} selbst als auch ihrer Implementierung bedeutet~\cite{vol22}.
 
 Der \AFA dagegen stellt \ua aus diesem Grund die Spezifikation der \ac{API} an erste Stelle, kann daher aber auch kein Gebrauch von einer automatischen Generierung der Spezifikation machen.
-Dafür bietet die Spezifikation eine Programmiersprachen-unabhängige Grundlage sowohl für die serverseitige Implementierung als auch für die clientseitige Nutzung der \ac{API}.
+Dafür bietet die Spezifikation eine Programmiersprachen"=unabhängige Grundlage sowohl für die serverseitige Implementierung als auch für die clientseitige Nutzung der \ac{API}.
 Für das Grundgerüst dieser Implementierungen wiederum existieren ebenfalls Hilfsmittel, die aus der Spezifikation automatisch Code generieren können~\cite{ope24}.
-Durch den initialen Entwurf der Spezifikation haben Entwickler möglichst früh einen Überblick über die Anforderungen an ihre Arbeit und können Design-Fehler deutlich früher erkennen und beheben, als das mit traditionellen Methoden möglich wäre~\cite[1627]{cha21}.
+Durch den initialen Entwurf der Spezifikation haben Entwickler möglichst früh einen Überblick über die Anforderungen an ihre Arbeit und können Design"=Fehler deutlich früher erkennen und beheben, als das mit traditionellen Methoden möglich wäre~\cite[1627]{cha21}.
 
 \section{Bedeutung für die moderne Softwareentwicklung}
 Gut konzipierte \acp{API} werden immer wichtiger, denn Unternehmen erkennen zunehmend den Wert von \acp{API} als eigenständige Produkte und streben teilweise sogar danach, diese zu monetarisieren.
-Besonders die Entwicklung Cloud-basierter Anwendungen und Service-orientierter Architekturen zum de-facto Standard in der Softwareentwicklung für Enterprise Anwendungen hat die Bedeutung von \acp{API} als zentrale Komponente einer solchen Architektur weiter erhöht.
-In diesem Kontext seien auch Microservices genannt, eines der aktuell am weitesten verbreiteten Architekturmuster im Umfeld verteilter, Cloud-basierter Systeme, welches ein hohes Maß an Wartbarkeit, Unabhängigkeit und Skalierbarkeit aller Systemkomponenten verspricht~\cites[73-75]{bea22}[5]{kul23}.
+Besonders die Entwicklung Cloud"=basierter Anwendungen und Service"=orientierter Architekturen zum de"=facto Standard in der Softwareentwicklung für Enterprise Anwendungen hat die Bedeutung von \acp{API} als zentrale Komponente einer solchen Architektur weiter erhöht.
+In diesem Kontext seien auch Microservices genannt, eines der aktuell am weitesten verbreiteten Architekturmuster im Umfeld verteilter, Cloud"=basierter Systeme, welches ein hohes Maß an Wartbarkeit, Unabhängigkeit und Skalierbarkeit aller Systemkomponenten verspricht~\cites[73"=75]{bea22}[5]{kul23}.
 
-Vor diesem Hintergrund wird der \AFA immer wichtiger, da er die Anforderungen an Service-orientierte Architekturen gezielt fördert und möglichst früh im \ac{SDLC} berücksichtigt~\cite[1627]{cha21}.
+Vor diesem Hintergrund wird der \AFA immer wichtiger, da er die Anforderungen an Service"=orientierte Architekturen gezielt fördert und möglichst früh im \ac{SDLC} berücksichtigt~\cite[1627]{cha21}.
 Durch den Fokus auf die Architektur im \AFA kann die Entwicklung des gesamten Systems bis zur Marktreife beschleunigt werden, weshalb er sich immer größerer Beliebtheit erfreut~\cite[76]{bea22}.
