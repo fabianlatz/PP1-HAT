@@ -35,13 +35,8 @@ Die Gesamtheit aller \acp{API} eines Unternehmens sollte zentral katalogisiert w
 So können sich zukünftige Projekte an bestehenden \acp{API} orientieren und diese womöglich sogar wiederverwenden~\cite[3]{kul23}.
 
 \section{Mock"=Server für parallele Entwicklung}
+\label{sec:mock-server}
 Eine besondere Rolle bei der \hyperref[sec:parallel-dev]{parallelen Entwicklung von Client"= und Server"=Komponenten} spielt der Einsatz von Mock"=Servern.
 Diese simulieren die Server"=Komponenten und ermöglichen es den Entwicklern der Client"=Komponenten, bereits mit der Arbeit zu beginnen, bevor die Server"=Komponenten fertiggestellt sind.
 Dadurch wird auch die Möglichkeit geschaffen, testgetriebene Entwicklung von der \ac{API}"=Spezifikation aus zu betreiben~\cite[353]{de23}.
 Dabei sollten die Mock"=Server möglichst einfach und schnell aufzusetzen sein, um ihre Vorteile nicht durch zusätzlichen Aufwand zu schmälern.
-
-% Keine Quellen, evtl. unnötig
-Es ist ebenso möglich, eine Fassade der \ac{API} tatsächlich zu implementieren, sodass der echte Server verwendet werden kann.
-Bei diesem Vorgehen würden die nötigen Endpunkte und Business"=Objekte bereits definiert und implementiert, jedoch ohne die eigentliche Logik dahinter. Dieser Schritt stünde auch bei Verwendung eines externen Mock"=Servers an erster Stelle der serverseitigen Implementierung, spart also effektiv sogar die Zeit für die Konfiguration eines Mock"=Servers.
-Eine automatische Generierung der \ac{OAD} aus der Fassade heraus würde dann bereits die vorgegebene Spezifikation erfüllen, ohne dass die dahinterliegende Logik bereits implementiert sein muss.
-Diese Fassade kann vergleichsweise schnell implementiert werden und ermöglicht es, die \ac{API} von Beginn an vom tatsächlich verwendeten Server aus bereitzustellen, was die insgesamt benötigten Systeme reduziert.
