@@ -6,9 +6,24 @@ Dies wird vornehmlich durch klarere Übergänge zwischen den einzelnen Systemkom
 \section{Parallele Entwicklung von Client"= und Server"=Komponenten} \label{sec:parallel-dev}
 \AF erlaubt eine parallele Entwicklung von Client"=Komponenten, die die \ac{API} nutzen, und den Server"=Komponenten, die die \ac{API} implementieren und bereitstellen.
 Zusätzlich können auf Basis einer \ac{API}"=Spezifikation auch Tests geschrieben werden, die der Verifizierung der \ac{API}"=Implementierung dienen \textendash\ alles auf Basis der zu Beginn definierten \ac{API}, beispielsweise in Form einer \ac{OAD}~\cite{vol22}.
+
+\begin{figure}[hb]
+	\centering
+	\subfloat[\centering Code-First-Ansatz]{\label{fig:code-first}\input{gfx/flowchart-code-first.tikz}}
+	\qquad
+	\subfloat[\centering \AFA]{\label{fig:api-first}\input{gfx/flowchart-api-first.tikz}}
+	\caption{Vergleich von Code-First- und \AFA}
+	\label{fig:parallel-dev}
+\end{figure}
+
+\autoref{fig:parallel-dev} zeigt deutlich den Unterschied zwischen dem traditionellen Code"=First"=Ansatz und dem \AFA.
+Während ersterer aus den Anforderungen zunächst die Server"=Komponenten implementiert, darauf aufbauend die \ac{API} spezifiziert und dann erst die Client"=Komponenten entwickelt, wird beim \AFA aus den Anforderungen zuerst die \ac{API}"=Spezifikation abgeleitet, auf deren Basis dann parallel sowohl Server"= als auch Client"=Komponenten entwickelt werden können.
+Damit wird der lineare Prozess des Code"=First"=Ansatzes aufgebrochen und Abhängigkeiten von vorausgehenden Arbeitsschritten auf die Spezifikation der \ac{API} reduziert.
+Diese bildet klar erkennbar das erste und zentrale Artefakt der \AF-Entwicklung.
+Die Schritte, die mit einem\;{\footnotesize\faCog}\;gekennzeichnet sind, können durch den Einsatz von Tools automatisiert werden, um die Entwicklung weiter zu beschleunigen.
 Unter Umständen erlaubt dies sogar die parallele Entwicklung verschiedener Server"=Komponenten, wenn bereits im Design der \ac{API} eine klare und sinnvolle Trennung in Microservices erkennbar ist, indem \bspw Endpunkte mit demselben Präfix zu einer Sub"=\ac{API} in einem Service zusammengefasst werden~\cite[354]{de23}.
 
-Eine solche Trennung von Client"= und Server wird auch \emph{kopflose} oder \emph{headless} Architektur genannt, da der Kopf, gemeint ist der Client, vom Rest des Körpers, der Logik auf Serverseite, getrennt ist~\cite[5]{kul23}.
+Eine solche Trennung von Client"= und Server wird auch \emph{kopflose} oder \emph{\foreignlanguage{american}{headless}} Architektur genannt, da der Kopf, gemeint ist der Client, vom Rest des Körpers, der Logik auf Serverseite, getrennt ist~\cite[5]{kul23}.
 Mit diesem Vorteil wird die Entwicklungszeit eines Projekts mit Client"= und Server"=Komponenten verkürzt, da die Entwickler der Client"=Komponenten nicht auf die Fertigstellung der Server"=Komponenten warten müssen, um mit ihrer Arbeit beginnen zu können.
 Dabei können Mock"=Server besonders hilfreich sein, um fehlende Server"=Implementierungen während der laufenden Client"=Entwicklung zu simulieren.
 Das wirkt sich ebenfalls positiv auf die Stimmung der Entwickler aus, da sie nicht auf andere Entwickler angewiesen sind und somit ihre Arbeit selbstständiger gestalten können~\cite[351]{de23}.
@@ -23,5 +38,5 @@ Die Konformität mit dem \ac{REST}"=Paradigma in Kombination mit einer ausführl
 Durch die frühestmögliche Spezifikation der \ac{API} wird auch die Qualität des produzierten Quellcodes erhöht.
 Den größten Einfluss darauf hat die frühe Erkennung von Fehlern in der Spezifikation, die im Gegensatz zum traditionellen Code"=First"=Ansatz nicht erst im Laufe der Implementierung, sondern bereits in der Designphase erkannt werden können.
 Das spart mitunter aufwändige Refaktorisierungen und Änderungen an der Implementierung später im Entwicklungsprozess~\cite{vol22}.
-Zu beachten ist dabei allerdings die Tatsache, dass bei einer Vorausplanung viele Eventualitäten und Randfälle bedacht werden müssen, um potentielle Fehlerquellen identifizieren zu können. Das erfordert eine tiefe Kenntnis des Systems und der Anforderungen, die an die \ac{API} gestellt werden~\cite[362]{de23}. % doppelt sich mit Grundlagen, Editor"=line 17
+Zu beachten ist dabei allerdings die Tatsache, dass bei einer Vorausplanung viele Eventualitäten und Randfälle bedacht werden müssen, um potenzielle Fehlerquellen identifizieren zu können. Das erfordert eine tiefe Kenntnis des Systems und der Anforderungen, die an die \ac{API} gestellt werden~\cite[362]{de23}. % doppelt sich mit Grundlagen, Editor"=line 17
 Die Einhaltung der \ac{API}"=Spezifikation bei der Implementierung erfordert zudem eine gewisse Einheitlichkeit bis hin zu Standardisierungen, die die Wartbarkeit und Erweiterbarkeit des Systems besonders im Kontext einer Microservice"=Architektur positiv beeinflussen~\cite[1628]{cha21}.

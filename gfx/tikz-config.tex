@@ -1,30 +1,30 @@
 \usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{fontawesome5}
+\usetikzlibrary{shapes.geometric, arrows, positioning, trees}
 
 \tikzstyle{startstop} = [rectangle, rounded corners,
-minimum width=3cm,
+minimum width=10mm,
 minimum height=1cm,
 text centered,
-draw=black]
-
-\tikzstyle{io} = [trapezium,
-trapezium stretches=true,
-trapezium left angle=70,
-trapezium right angle=110,
-minimum width=3cm,
-minimum height=1cm, text centered,
-draw=black]
+align=center,
+draw=black
+]
 
 \tikzstyle{process} = [rectangle,
-minimum width=3cm,
+minimum width=10mm,
 minimum height=1cm,
 text centered,
-text width=3cm,
-draw=black]
+text width=31mm,
+align=center,
+draw=black
+]
 
 \tikzstyle{decision} = [diamond,
-minimum width=3cm,
+minimum width=10mm,
 minimum height=1cm,
 text centered,
-draw=black]
-\tikzstyle{arrow} = [thin,->,>=stealth]
+align=center,
+draw=black
+]
+
+\tikzstyle{arrow} = [thin,->,>=latex]

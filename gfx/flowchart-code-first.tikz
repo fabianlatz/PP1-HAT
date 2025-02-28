@@ -1,0 +1,10 @@
+\begin{tikzpicture}[node distance=5mm]
+	\node (requirements) [startstop] {Anforderungen};
+	\node (server) [process, below=of requirements] {Server-Implementierung};
+	\node (api) [process, below=of server, line width=1.5pt] {\textbf{\ac{API}-Spezifikation}};
+	\node (client) [process, below=of api] {Client-Implementierung};
+
+	\draw [arrow] (requirements) to (server);
+	\draw [arrow] (server) to node[midway, right]{\tiny\faCog} (api);
+	\draw [arrow] (api) to node[midway, right]{\tiny\faCog} (client);
+\end{tikzpicture}
