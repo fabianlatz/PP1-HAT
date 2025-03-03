@@ -22,7 +22,7 @@ Damit wird der lineare Prozess des Code"=First"=Ansatzes aufgebrochen und Abhän
 Diese bildet klar erkennbar das erste und zentrale Artefakt der \AF-Entwicklung.
 Unter Umständen erlaubt dies sogar die parallele Entwicklung verschiedener Server"=Komponenten, wenn bereits im Design der \ac{API} eine klare und sinnvolle Trennung in Microservices erkennbar ist, indem \bspw Endpunkte mit demselben Präfix zu einer Sub"=\ac{API} in einem Service zusammengefasst werden~\cite[354]{de23}.
 
-Eine solche Trennung von Client"= und Server wird auch \emph{kopflose} oder \emph{\foreignlanguage{american}{headless}} Architektur genannt, da der Kopf, gemeint ist der Client, vom Rest des Körpers, der Logik auf Serverseite, getrennt ist~\cite[5]{kul23}.
+Eine solche Trennung von Client und Server wird auch \emph{kopflose} oder \emph{\foreignlanguage{american}{headless}} Architektur genannt, da der Kopf, gemeint ist der Client, vom Rest des Körpers, der Logik auf Serverseite, getrennt ist~\cite[5]{kul23}.
 Mit diesem Vorteil wird die Entwicklungszeit eines Projekts mit Client"= und Server"=Komponenten verkürzt, da die Entwickler der Client"=Komponenten nicht auf die Fertigstellung der Server"=Komponenten warten müssen, um mit ihrer Arbeit beginnen zu können.
 
 \section{Verbesserung der Kommunikation zwischen Entwicklern}
@@ -35,5 +35,5 @@ Die Konformität mit dem \ac{REST}"=Paradigma in Kombination mit einer ausführl
 Durch die frühestmögliche Spezifikation der \ac{API} wird auch die Qualität des produzierten Quellcodes erhöht.
 Den größten Einfluss darauf hat die frühe Erkennung von Fehlern in der Spezifikation, die im Gegensatz zum traditionellen Code"=First"=Ansatz nicht erst im Laufe der Implementierung, sondern bereits in der Designphase erkannt werden können.
 Das spart mitunter aufwändige Refaktorisierungen und Änderungen an der Implementierung später im Entwicklungsprozess~\cite{vol22}.
-Zu beachten ist dabei allerdings die Tatsache, dass bei einer Vorausplanung viele Eventualitäten und Randfälle bedacht werden müssen, um potenzielle Fehlerquellen identifizieren zu können. Das erfordert eine tiefe Kenntnis des Systems und der Anforderungen, die an die \ac{API} gestellt werden~\cite[362]{de23}. % doppelt sich mit Grundlagen, Editor"=line 17
+Zu beachten ist dabei allerdings die Tatsache, dass bei einer Vorausplanung viele Eventualitäten und Randfälle bedacht werden müssen, um potenzielle Fehlerquellen identifizieren zu können. Das erfordert eine tiefe Kenntnis des Systems und der Anforderungen, die an die \ac{API} gestellt werden~\cite[362]{de23}.
 Die Einhaltung der \ac{API}"=Spezifikation bei der Implementierung erfordert zudem eine gewisse Einheitlichkeit bis hin zu Standardisierungen, die die Wartbarkeit und Erweiterbarkeit des Systems besonders im Kontext einer Microservice"=Architektur positiv beeinflussen~\cite[1628]{cha21}.
