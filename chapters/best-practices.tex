@@ -20,17 +20,15 @@ Dabei fehlt es aktuell noch an standardisierten Begriffen oder Prozessen, die da
 
 \section{API"=Design und "=Dokumentation}
 Beim Design einer \ac{API} sollten einige Dinge beachtet werden, um eine möglichst benutzerfreundliche und konsistente Schnittstelle zu schaffen.
-Neben dem Befolgen von Prinzipien des \ac{REST}"=Paradigmas sollte ein besonderes Augenmerk auf die Definition von Fehlercodes und "=nachrichten gelegt werden, um möglichst aufschlussreiche Fehlermeldungen für Entwickler wie Endnutzer bereitstellen zu können.
-Auch sollte von Beginn an auf eine konsistente Namensgebung und Strukturierung der Endpunkte und Business"=Objekte geachtet werden, um die \ac{API} leichter verständlich zu machen.
-Um nicht"=funktionalen Anforderungen Rechnung zu tragen, sollte auch die Performance sowie die Sicherheit des Systems bereits in der Design"=Phase berücksichtigt werden~\cite[352\psq,354]{de23}.
+Neben dem Befolgen von Prinzipien des \ac{REST}"=Paradigmas sollte besonderes Augenmerk auf das Einhalten von Namenskonventionen für \acp{URL} und Business"=Objekte, die Verwendung passender \ac{HTTP}"=Methoden und "=Statuscodes sowie auf die einheitliche Definition von Fehlercodes und "=nachrichten gelegt werden.
+Der Einsatz geeigneter Werkzeuge erleichtert die Einhaltung solcher Konventionen.
+Um auch nicht"=funktionalen Anforderungen Rechnung zu tragen, sollten Performanz sowie Sicherheit des Systems ebenfalls in der Design"=Phase berücksichtigt werden~\cite[352\psq,354,360]{de23}.
 
 Um alle Aspekte des Designs festzuhalten und für alle Beteiligten zugänglich zu machen, sollte die \ac{API} für alle Entwickler transparent dokumentiert werden, vorzugsweise in einer \ac{OAD}.
 Die Dokumentation sollte zusätzlich zu den semantischen Informationen textuelle Beschreibungen an Endpunkten, Parametern und Business"=Objekten \textendash\ bei Bedarf um Beispiele ergänzt \textendash\ enthalten~\cite[353]{de23}.
-Die Dokumentation sollte stets aktuell gehalten und in einem zentralen Repository unter Versionskontrolle gestellt werden, um eine konsistente und verlässliche Informationsquelle zu gewährleisten.
-
-Um \AF über Teams und Projekte hinweg erfolgreich zu etablieren, ist es sinnvoll, einen Leitfaden zum \ac{API}"=Design zu verfassen, an den sich alle \acp{API} des Unternehmens halten müssen~\cites[3\psq]{kul23}[359]{de23}.
-Dieser Leitfaden sollte sich zudem an der gängigen Praxis für \ac{REST}"=\acp{API} orientieren, darunter Namenskonventionen für \acp{URL}, \ac{HTTP}"=Methoden und "=Statuscodes.
-Der Einsatz geeigneter Werkzeuge erleichtert die Einhaltung solcher Konventionen~\cite[360]{de23}.
+Sie sollte stets aktuell gehalten und in einem zentralen Repository unter Versionskontrolle gestellt werden, um eine konsistente und verlässliche Informationsquelle zu gewährleisten.
+Als Ausgangspunkt für diese Dokumentation ist es sinnvoll, einen Leitfaden zum \ac{API}"=Design zu verfassen, nach dem alle \acp{API} eines Unternehmens entworfen werden.
+So können \foreignlanguage{american}{Best Practices} zum \AFA etabliert werden, um dessen Adaption zu erleichtern~\cites[3\psq]{kul23}[359]{de23}.
 
 \section{Mock"=Server für parallele Entwicklung}
 \label{sec:mock-server}
