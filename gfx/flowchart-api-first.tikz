@@ -1,10 +1,18 @@
 \begin{tikzpicture}[node distance=5mm]
+	\node[rectangle, anchor=north east] at (4.4,2.4) {
+		\setlength{\tabcolsep}{2pt}
+		\begin{tabular}{c l}
+			\multicolumn{2}{c}{\textbf{Legende}} \\
+			\tiny\faCog & automatisierbar        \\
+		\end{tabular}
+	};
 	\node (requirements) [startstop] {Anforderungen};
 	\node (api) [process, below=of requirements, line width=1.5pt] {\textbf{\ac{API}-Spezifikation}};
-	\node (server) [process, below=of api, xshift=-25mm] {Server-Implementierung};
-	\node (client) [process, below=of api, xshift=25mm] {Client-Implementierung};
+	\node (server) [process, below=of api, xshift=25mm] {Server-Implementierung};
+	\node (client) [process, below=of api, xshift=-25mm] {Client-Implementierung};
 
 	\draw [arrow] (requirements) to (api);
 	\draw [arrow] (api) |- node[near end, above]{\tiny\faCog} (server);
 	\draw [arrow] (api) |- node[near end, above]{\tiny\faCog} (client);
+
 \end{tikzpicture}

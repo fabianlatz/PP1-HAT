@@ -20,7 +20,6 @@ Zusätzlich können auf Basis einer \ac{API}"=Spezifikation auch Tests geschrieb
 Während ersterer aus den Anforderungen zunächst die Server"=Komponenten implementiert, darauf aufbauend die \ac{API} spezifiziert und dann erst die Client"=Komponenten entwickelt, wird beim \AFA aus den Anforderungen zuerst die \ac{API}"=Spezifikation abgeleitet, auf deren Basis dann parallel sowohl Server"= als auch Client"=Komponenten entwickelt werden können.
 Damit wird der lineare Prozess des Code"=First"=Ansatzes aufgebrochen und Abhängigkeiten von vorausgehenden Arbeitsschritten auf die Spezifikation der \ac{API} reduziert.
 Diese bildet klar erkennbar das erste und zentrale Artefakt der \AF-Entwicklung.
-Die Schritte, die mit einem\;{\footnotesize\faCog}\;gekennzeichnet sind, können durch den Einsatz von Tools automatisiert werden, um die Entwicklung weiter zu beschleunigen.
 Unter Umständen erlaubt dies sogar die parallele Entwicklung verschiedener Server"=Komponenten, wenn bereits im Design der \ac{API} eine klare und sinnvolle Trennung in Microservices erkennbar ist, indem \bspw Endpunkte mit demselben Präfix zu einer Sub"=\ac{API} in einem Service zusammengefasst werden~\cite[354]{de23}.
 
 Eine solche Trennung von Client"= und Server wird auch \emph{kopflose} oder \emph{\foreignlanguage{american}{headless}} Architektur genannt, da der Kopf, gemeint ist der Client, vom Rest des Körpers, der Logik auf Serverseite, getrennt ist~\cite[5]{kul23}.
