@@ -12,7 +12,7 @@ Zusätzlich können auf Basis einer \ac{API}"=Spezifikation auch Tests geschrieb
 	\subfloat[\centering Code-First-Ansatz]{\label{fig:code-first}\input{gfx/flowchart-code-first.tikz}}
 	\qquad
 	\subfloat[\centering \AFA]{\label{fig:api-first}\input{gfx/flowchart-api-first.tikz}}
-	\caption{Vergleich von Code-First- und \AFA}
+	\caption{Vergleich des Entwicklungsprozesses von Code-First- und \AFA}
 	\label{fig:parallel-dev}
 \end{figure}
 
@@ -23,6 +23,7 @@ Diese bildet klar erkennbar das erste und zentrale Artefakt der \AF-Entwicklung.
 Unter Umständen erlaubt dies sogar die parallele Entwicklung verschiedener Server"=Komponenten, wenn bereits im Design der \ac{API} eine klare und sinnvolle Trennung in Microservices erkennbar ist, indem beispielsweise Endpunkte mit demselben Präfix zu einer Sub"=\ac{API} in einem Service zusammengefasst werden~\cite[354]{de23}.
 
 Eine solche Trennung von Client und Server wird auch \emph{kopflose} oder \emph{\foreignlanguage{american}{headless}} Architektur genannt, da der Kopf, gemeint ist der Client, vom Rest des Körpers, der Logik auf Serverseite, getrennt ist~\cite[5]{kul23}.
+Daraus resultiert ein enormer Vorteil, denn alle Komponenten hängen in ihrer Entwicklung nur noch von der \ac{API}"=Spezifikation ab und können dementsprechend zeitgleich und unabhängig voneinander entwickelt werden.
 Mit diesem Vorteil wird die Entwicklungszeit eines Projekts mit Client"= und Server"=Komponenten verkürzt, da die Entwickler der Client"=Komponenten nicht auf die Fertigstellung der Server"=Komponenten warten müssen, um mit ihrer Arbeit beginnen zu können.
 
 \section{Verbesserung der Kommunikation zwischen Entwicklern}
