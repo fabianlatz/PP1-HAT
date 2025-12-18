@@ -44,11 +44,15 @@
 %\cleardoublepage\include{frontbackmatter/Listings}
 %\cleardoublepage\include{frontbackmatter/Acronyms}
 
+% Only include if no figures, tables etc. are included
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+
 % Mainmatter
 \cleardoublepage
 \pagestyle{scrheadings}
 \pagenumbering{arabic}
-% Alwas use \cleardoublepage before \part{...}
+% Always use \cleardoublepage before \part{...}
 %\cleardoublepage
 %\part{Thesis}\label{pt:thesis}
 
